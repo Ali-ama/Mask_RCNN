@@ -1,0 +1,41 @@
+
+#Start the training with this command, running from the project (like: balloon) directory. 
+
+#Here, we’re specifying that training should start from the pre-trained COCO weights. 
+
+#The code will download the weights from our repository automatically:
+
+
+#python3 balloon.py train --dataset=/path/to/dataset --weights=coco
+
+
+#--dataset=/path/to/dataset
+#--dataset=/home/ali/Projects/Mask_RCNN/samples/balloon/datasets/balloon
+
+# --weights=coco if you like to start from coco weights do not use the path to coco wieghts 
+
+# --logs=/home/ali/Projects/Mask_RCNN/logs
+
+#to use mask_rcnn_coco.h5
+
+python3 balloon.py train --dataset=/home/ali/Projects/Mask_RCNN/samples/balloon/datasets/balloon \
+--weights=coco \
+--logs=/home/ali/Projects/Mask_RCNN/logs
+
+
+#to use mask_rcnn_balloon.h5
+
+python3 balloon.py train --dataset=/home/ali/Projects/Mask_RCNN/samples/balloon/datasets/balloon \
+--weights=/home/ali/Projects/Mask_RCNN/samples/balloon/mask_rcnn_balloon.h5 \
+--logs=/home/ali/Projects/Mask_RCNN/logs
+
+
+
+#And to resume training if it stopped:
+
+python3 balloon.py train --dataset=/path/to/dataset --model=last
+
+
+
+
+

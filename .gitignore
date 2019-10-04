@@ -5,7 +5,11 @@ logs/
 results/
 temp/
 test/
-
+notes/
+pipfile
+pipfile.lock
+samples/container/
+!/samples/container/container_seg.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
