@@ -6,8 +6,10 @@ results/
 temp/
 test/
 notes/
-pipfile
-pipfile.lock
+Pipfile
+Pipfile.lock
+samples/container/*
+!/samples/container/container_seg.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
