@@ -179,12 +179,12 @@ class ContainerDataset(utils.Dataset):
 def train(model):
     """Train the model."""
     # Training dataset.
-    dataset_train = containerDataset()
+    dataset_train = ContainerDataset()
     dataset_train.load_container(args.dataset, "train")
     dataset_train.prepare()
 
     # Validation dataset
-    dataset_val = containerDataset()
+    dataset_val = ContainerDataset()
     dataset_val.load_container(args.dataset, "val")
     dataset_val.prepare()
 
@@ -286,7 +286,7 @@ if __name__ == '__main__':
                         help="'train' or 'splash'")
     parser.add_argument('--dataset', required=False,
                         metavar="/path/to/container/dataset/",
-                        help='Directory of the container dataset')
+                        help='Directory of the Container dataset')
     parser.add_argument('--weights', required=True,
                         metavar="/path/to/weights.h5",
                         help="Path to weights .h5 file or 'coco'")
@@ -315,9 +315,9 @@ if __name__ == '__main__':
 
     # Configurations
     if args.command == "train":
-        config = containerConfig()
+        config = ContainerConfig()
     else:
-        class InferenceConfig(containerConfig):
+        class InferenceConfig(ContainerConfig):
             # Set batch size to 1 since we'll be running inference on
             # one image at a time. Batch size = GPU_COUNT * IMAGES_PER_GPU
             GPU_COUNT = 1

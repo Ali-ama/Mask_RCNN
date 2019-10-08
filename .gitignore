@@ -7,7 +7,7 @@ temp/
 test/
 notes/
 Pipfile
-Pipfile.lock
+#Pipfile.lock
 samples/container/*
 !/samples/container/container_seg.py
 # Byte-compiled / optimized / DLL files
